@@ -1,5 +1,10 @@
 # chat-chit
 
+## Clone the repo
+```
+$ git clone https://github.com/thienthinh/electron-react-chat-app.git
+```
+
 ## Install dependencies
 
 ```

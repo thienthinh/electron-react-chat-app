@@ -1,4 +1,24 @@
-# chat-chit
+# Electron React Chat App
+
+## TODO:
+- Update UI from previous version
+- Chang firebase chat host URL for personal usage
+- Clear this todo section
+
+The simple desktop Chat App build on top of Electron and React/Redux
+
+This project can be consider as a electron-react-redux boilerplate
+
+
+## Technical dependencies:
+
+- [Electron](http://electron.atom.io)
+- [React](https://facebook.github.io/react/)
+- [Redux](http://redux.js.org)
+- SASS
+- [Webpack](https://webpack.github.io)
+- ES2015
+
 
 ## Clone the repo
 ```

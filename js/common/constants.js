@@ -20,7 +20,7 @@ export const CLEAR_USERS_REDUCER = 'CLEAR_USERS_REDUCER'
 export const CLEAR_MESSAGES_REDUCER = 'CLEAR_MESSAGES_REDUCER'
 
 import Firebase from 'firebase'
-export const FIREBASE_URL = 'https://thinhle-redux-chat.firebaseio.com/'
+export const FIREBASE_URL = 'https://thinhle-github-chat.firebaseio.com/'
 export const FIREBASE_REF = new Firebase(FIREBASE_URL)
 import Fireproof from 'fireproof'
 export const FIREPROOF = new Fireproof(FIREBASE_REF)

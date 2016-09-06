@@ -1,0 +1,82 @@
+@mixin variation($delay, $size){
+  animation: spin 1.8s $delay infinite;
+  &:after {
+    top: -($size/2);
+    left: -($size/2);
+    width: $size;
+    height: $size;
+  }
+}
+body {
+  background-color: #1dafec;
+}
+.spinner {
+  -webkit-transform:rotate(-90deg);
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 60px auto;
+  i {
+    position: absolute;
+    display: block;
+    transform-origin: -50px;
+    top:  50%;
+    left: 50%;
+    
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+    
+    &:nth-child(1) {
+      @include variation(.1s, 20px);
+    }
+    &:nth-child(2) {
+      @include variation(.2s, 16px);
+    }
+    &:nth-child(3) {
+      @include variation(.3s, 14px);
+    }
+    &:nth-child(4) {
+      @include variation(.4s, 12px);
+    }
+    &:nth-child(5) {
+      @include variation(.5s, 10px);
+    }
+    &:nth-child(6) {
+      @include variation(.6s, 8px);
+    }
+    
+    &.toggle-inflate{
+      animation: inflate 1.3s ease;
+    }
+  }
+}
+
+@keyframes  spin {
+  0% {
+    transform: translateX(50%) translateY(-50%) rotate(0deg);
+  }
+  20% {
+    transform: translateX(50%) translateY(-50%) rotate(0deg);
+  }
+  80% {
+    transform: translateX(50%) translateY(-50%) rotate(360deg);
+  }
+  100% {
+    transform: translateX(50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+
+@keyframes  inflate {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

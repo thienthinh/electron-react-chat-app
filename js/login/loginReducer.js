@@ -1,5 +1,6 @@
 import {
 	FETCH_CURRENT_USER,
+	LOGOUT_USER,
 	REQUEST_CREATE_USER,
 	RECEIVE_CREATED_USER
 } from 'constants'
@@ -15,6 +16,8 @@ const currentUser = (state = null, action) => {
 				return null
 			}
 			return Object.assign({}, state, action.currentUser)
+		case LOGOUT_USER:
+			return null
 		case REQUEST_CREATE_USER:
 			console.log("Creating User")
 			return state

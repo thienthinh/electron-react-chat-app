@@ -6,7 +6,7 @@ import Login from 'LoginSection'
 
 export default (
 	<Route path="/" component={AppContainer}>
-		<IndexRoute component={Login} />
+		<Route component={Login} />
 		<Route path="/app" component={App} />
 	</Route>
 )

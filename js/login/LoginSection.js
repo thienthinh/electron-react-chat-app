@@ -9,7 +9,7 @@ class LoginSection extends Component {
 
 	componentDidMount() {
     const { dispatch } = this.props
-    dispatch(fetchCurrentUser())
+    // dispatch(fetchCurrentUser())
   }
 
   componentWillReceiveProps(nextProps) {

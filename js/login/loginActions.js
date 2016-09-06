@@ -1,5 +1,7 @@
 import {
+	REQUEST_CURRENT_USER,
 	FETCH_CURRENT_USER,
+	LOGOUT_USER,
 	REQUEST_CREATE_USER,
 	RECEIVE_CREATED_USER,
 	FIREBASE_URL,
@@ -28,6 +30,12 @@ export function fetchCurrentUser() {
 		}, function(error) {
 			console.log(error.code)
 		})
+	}
+}
+
+function requestCurrentUser() {
+	return {
+		type: REQUEST_CURRENT_USER,
 	}
 }
 
@@ -73,8 +81,15 @@ export function createUser(name) {
 	}
 }
 
+function logoutUser() {
+	return {
+		type: LOGOUT_USER
+	}
+}
+
 export function deleteUser(user) {
 	return dispatch => {
+		dispatch(logoutUser())
 		
 		userRef.child(user.id).remove(function() {
 			localStorage.setItem('currentUser', null)
